@@ -1,6 +1,6 @@
 # Forvo Pronunciation Downloader
 
-Simple tool for downloading a list of word pronuncations from
+Simple tool for downloading a list of word pronunciations from
 [Forvo](https://forvo.com)
 
 ## Configuration
@@ -11,7 +11,7 @@ directory as the forvo executable.
 - Language codes can be found [here](https://forvo.com/languages-codes/).
 - API key requires an account and is available [here](https://api.forvo.com).
 
-# Usage
+## Usage
 
 To specify which words are downloaded, enter one word per line in `forvo.txt` in
 the same directory as the tool executable.
