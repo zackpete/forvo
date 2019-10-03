@@ -70,6 +70,13 @@ func main() {
 }
 
 func (this *Forvo) Download(word, language string) {
+	mp3 := word + ".mp3"
+
+	if exists(mp3) {
+		log(fmt.Sprintf("'%s' already exists, skipping", mp3))
+		return
+	}
+
 	uri := fmt.Sprintf(
 		"https://apifree.forvo.com"+
 			"/key/%s"+
@@ -131,13 +138,6 @@ func (this *Forvo) Download(word, language string) {
 			resp1.StatusCode,
 			body(resp1.Body),
 		))
-		return
-	}
-
-	mp3 := word + ".mp3"
-
-	if exists(mp3) {
-		log(fmt.Sprintf("'%s' already exists", mp3))
 		return
 	}
 
