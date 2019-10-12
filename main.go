@@ -126,6 +126,7 @@ func (this *Forvo) Download(word, language string) {
 	resp2, err := this.Get(results.Items[0].PathMp3)
 	if err != nil {
 		log(fmt.Sprintf("failed to download '%s' audio", err))
+		return
 	}
 
 	if resp2.StatusCode == 429 {
